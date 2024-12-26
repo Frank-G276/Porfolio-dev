@@ -1,0 +1,53 @@
+---
+// src/components/Contact.astro
+const instagramUrl = "https://www.instagram.com/yourprofile";
+const linkedinUrl = "https://www.linkedin.com/in/yourprofile";
+const facebookUrl = "https://www.facebook.com/yourprofile";
+const whatsappUrl = "https://wa.me/yourphonenumber";
+---
+
+<div class="contact pt-16 bg-zinc-900 pb-24">
+    <h2>Contact Me</h2>
+    <ul>
+        <li>
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+        </li>
+        <li>
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        </li>
+        <li>
+            <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
+        </li>
+        <li>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                WhatsApp
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    .contact {
+        text-align: center;
+    }
+    .contact ul {
+        list-style: none;
+        padding: 0;
+    }
+    .contact li {
+        margin: 10px 0;
+    }
+    .contact a {
+        text-decoration: none;
+        color: #0073b1; /* LinkedIn blue */
+    }
+    .contact a:hover {
+        text-decoration: underline;
+    }
+</style>
