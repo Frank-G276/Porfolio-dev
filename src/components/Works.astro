@@ -2,21 +2,13 @@
 import type { ComponentProps } from 'astro/types';
 import Control_prendario from '../components/Modals/Control_prendario.astro'
 
-type TagStylesKeys = 'Angular' | 'TypeScript' | 'Spring' | 'SQL'| 'Astro' | 'TypeScript' | 'Tailwind' | 'CSS' | 'HTML' | 'JavaScript' | 'React' | 'Svelte' | 'Vue';
+type TagStylesKeys = 'Angular' | 'TypeScript' | 'Spring' | 'SQL';
 
 const tagStyles: Record<TagStylesKeys, string> = {
-    'Angular': 'bg-red-950 text-red-400 dark:bg-red-950/50 dark:text-red-400 border-red-800',
-    'TypeScript': 'bg-blue-950 text-blue-400 dark:bg-blue-950/50 dark:text-blue-400 border-blue-800',
-    'Spring': 'bg-green-950 text-green-400 dark:bg-green-950/50 dark:text-green-400 border-green-800',
-    'SQL': 'bg-purple-950 text-purple-400 dark:bg-purple-950/50 dark:text-purple-400 border-purple-800',
-    'Astro': 'bg-purple-950 text-purple-400 dark:bg-purple-950/50 dark:text-purple-400 border-purple-800',
-    'Tailwind': 'bg-teal-950 text-teal-400 dark:bg-teal-950/50 dark:text-teal-400 border-teal-800',
-    'CSS': 'bg-blue-950 text-blue-400 dark:bg-blue-950/50 dark:text-blue-400 border-blue-800',
-    'HTML': 'bg-orange-950 text-orange-400 dark:bg-orange-950/50 dark:text-orange-400 border-orange-800',
-    'JavaScript': 'bg-yellow-950 text-yellow-400 dark:bg-yellow-950/50 dark:text-yellow-400 border-yellow-800',
-    'React': 'bg-cyan-950 text-cyan-400 dark:bg-cyan-950/50 dark:text-cyan-400 border-cyan-800',
-    'Svelte': 'bg-orange-950 text-orange-400 dark:bg-orange-950/50 dark:text-orange-400 border-orange-800',
-    'Vue': 'bg-green-950 text-green-400 dark:bg-green-950/50 dark:text-green-400 border-green-800',
+  'Angular': 'bg-red-950 text-red-400 dark:bg-red-950/50 dark:text-red-400 border-red-800',
+  'TypeScript': 'bg-blue-950 text-blue-400 dark:bg-blue-950/50 dark:text-blue-400 border-blue-800',
+  'Spring': 'bg-green-950 text-green-400 dark:bg-green-950/50 dark:text-green-400 border-green-800',
+  'SQL': 'bg-purple-950 text-purple-400 dark:bg-purple-950/50 dark:text-purple-400 border-purple-800',
 };
 
 interface Project {
@@ -32,20 +24,20 @@ interface Project {
 const projects = [
   {
     modal: Control_prendario,
-    title: 'Portfolio personal',
-    description: 'Portfolio personal desarrollado con Astro y TailwindCSS.',
-    tags: ['Astro', 'TypeScript', 'Tailwind'],
+    title: 'Control prendario: Gestión Digital para Almacén El Pistón',
+    description: 'Plataforma web para optimizar préstamos prendarios: gestión de clientes, pagos y reportes legales.',
+    tags: ['Angular', 'TypeScript', 'Spring', 'SQL'],
     demo: '#',
-    source: 'https://github.com/Frank-G276/Porfolio-dev',
-    image: 'Portfolio.png',
+    source: '#',
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3',
   }
   
 ]
 ---
 
-<section id="projects" class=" min-w-screen pt-16 min-h-screen border-b border-zinc-300 dark:border-zinc-800">
+<section id="works" class=" min-w-screen pt-16 min-h-screen border-b border-zinc-300 dark:border-zinc-800">
     <div class="container mx-auto pt-3">
-        <h2 class="text-4xl font-semibold text-center mb-12">Proyectos</h2>
+        <h2 class="text-4xl font-semibold text-center mb-12">Trabajos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
                 <div class="bg-white hover:bg-gray-50 border-gray-200 dark:bg-black/10 dark:hover:bg-gray-950 dark:border-gray-800 rounded-lg overflow-hidden

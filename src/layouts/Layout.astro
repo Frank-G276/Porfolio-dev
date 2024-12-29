@@ -12,16 +12,22 @@ import '@fontsource-variable/onest';
 		<meta name="generator" content={Astro.generator} />
 		<title>Frank Developer</title>
 	</head>
-	<body>
+	<body >
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-white 
+			bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
+		    dark:bg-neutral-950 dark:bg-gradiente-dark">
+		</div>
+		
 		<Header/>
 		<slot />
 	</body>
 </html>
-
 <style>
 	:root{
 		color-scheme: light dark;
+		scroll-behavior: smooth;
 	}
+	
 	html,
 	body {
 		margin: 0;
@@ -29,5 +35,8 @@ import '@fontsource-variable/onest';
 		width: 100%;
 		height: 100%;
 		font-family: 'Onest Variable', sans-serif;
+		max-width: 100vw;
+		
 	}
 </style>
+<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
