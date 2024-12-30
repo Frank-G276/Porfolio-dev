@@ -1,6 +1,6 @@
 ---
-import type { ComponentProps } from 'astro/types';
-import Control_prendario from '../components/Modals/Control_prendario.astro'
+import Portfolio from "./Modals/Portfolio.astro";
+
 
 type TagStylesKeys = 'Angular' | 'TypeScript' | 'Spring' | 'SQL'| 'Astro' | 'TypeScript' | 'Tailwind' | 'CSS' | 'HTML' | 'JavaScript' | 'React' | 'Svelte' | 'Vue';
 
@@ -23,22 +23,23 @@ interface Project {
   modal: any; 
   title: string;
   description: string;
-  tags: TagStylesKeys[]; // <- Corrección clave: tags es un array de TagStylesKeys
+  tags: TagStylesKeys[];
   demo: string;
   source: string;
   image: string;
 }
 
 const projects = [
-  {
-    modal: Control_prendario,
-    title: 'Portfolio personal',
-    description: 'Portfolio personal desarrollado con Astro y TailwindCSS.',
-    tags: ['Astro', 'TypeScript', 'Tailwind'],
-    demo: '#',
-    source: 'https://github.com/Frank-G276/Porfolio-dev',
-    image: 'Portfolio.png',
-  }
+   
+    {
+        modal: Portfolio,
+        title: 'Portfolio personal',
+        description: 'Portfolio personal desarrollado con Astro y TailwindCSS.',
+        tags: ['Astro', 'TypeScript', 'Tailwind'],
+        demo: '#',
+        source: 'https://github.com/Frank-G276/Porfolio-dev',
+        image: 'Portfolio.webp',
+    }
   
 ]
 ---

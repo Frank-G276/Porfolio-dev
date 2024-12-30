@@ -1,6 +1,7 @@
 ---
 import type { ComponentProps } from 'astro/types';
 import Control_prendario from '../components/Modals/Control_prendario.astro'
+import Portfolio from './Modals/Portfolio.astro';
 
 type TagStylesKeys = 'Angular' | 'TypeScript' | 'Spring' | 'SQL';
 
@@ -23,12 +24,12 @@ interface Project {
 
 const projects = [
   {
-    modal: Control_prendario,
+    modal: Portfolio,
     title: 'Control prendario: Gestión Digital para Almacén El Pistón',
     description: 'Plataforma web para optimizar préstamos prendarios: gestión de clientes, pagos y reportes legales.',
     tags: ['Angular', 'TypeScript', 'Spring', 'SQL'],
     demo: '#',
-    source: '#',
+    source: 'https://github.com/Frank-G276/Control-Prendario',
     image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3',
   }
   
