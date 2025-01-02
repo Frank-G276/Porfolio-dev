@@ -46,7 +46,10 @@ const projects = [
 
 <section id="projects" class=" min-w-screen pt-16 min-h-screen border-b border-zinc-300 dark:border-zinc-800">
     <div class="container mx-auto pt-3">
-        <h2 class="text-4xl font-semibold text-center mb-12">Proyectos</h2>
+        <div class="flex justify-center gap-2 mx-auto mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="my-auto" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.5L3.25 12l5.5 5.5m6.5-11l5.5 5.5l-5.5 5.5"/></svg>
+            <h2 class="text-4xl font-semibold my-auto">Proyectos</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
                 <div class="bg-white hover:bg-gray-50 border-gray-200 dark:bg-black/10 dark:hover:bg-gray-950 dark:border-gray-800 rounded-lg overflow-hidden

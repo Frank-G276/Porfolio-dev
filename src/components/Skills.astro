@@ -100,26 +100,40 @@ const skills: Skill[] = [
 
 ---
 
-<section id="skills" class="py-16 px-6 min-h-screen pt-16 content-center ">
+<section id="skills" class="py-16 px-6 min-h-screen pt-16  ">
     <div class="container mx-auto">
-        <h2 class="text-4xl font-semibold text-center mb-12">habilidades</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" translate="no">
+        <div class="flex justify-center gap-2 mx-auto mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="my-auto" viewBox="0 0 512 512"><path fill="currentColor" d="M275.2 512L480 409.6l20.5-307.2l-225.3 61.4zM29.5 409.6L234.3 512V163.8L9 102.4zM254.8 0L9 61.4l245.8 61.4l245.8-61.4z"/></svg>
+            <h2 class="text-4xl font-semibold my-auto">Habilidades</h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6  " translate="no">
            { skills.map((category) => (
-            <div class="bg-card p-6 rounded-lg text-center shadow-sm">
-                <h3 class="font-bold text-xl mb-2" translate="no">{category.name}</h3>
+            <div class="p-6 rounded-lg text-center shadow-sm sm:h-auto h-20 overflow-hidden
+             hover:h-auto interpolate "
+            >
+                <h3 class="font-bold text-xl mb-2  " translate="no">{category.name}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:hidden flex pb-2 mx-auto" width="35" height="35" viewBox="0 0 512 512"><path fill="currentColor" d="M365.7 102.4v146.3H512V102.4zm109.7 109.7h-73.1V139h73.1zM0 431.6h146.3V285.3H0zm36.6-109.7h73.1V395H36.6zM0 248.7h146.3V102.4H0zM36.6 139h73.1v73.1H36.6zm146.3 109.7h146.3V102.4H182.9zM219.4 139h73.1v73.1h-73.1zm-36.5 292.6h146.3V285.3H182.9zm36.5-109.7h73.1V395h-73.1zm146.3 109.7H512V285.3H365.7zm36.6-109.7h73.1V395h-73.1z"/></svg>
+                </h3>
+                         
                 <div class="flex flex-wrap content-center items-center justify-around">
                     {category.items.map((item) => (
                         <div class="w-fit flex flex-col items-center">
                             <p class="min-w-20">{item.name}</p>
-                            <div class="size-14 hover:scale-110 duration-200">
+                            <div class="sm:size-11 size-8 hover:scale-110 duration-200 ">
                                 <svg viewBox="0 0 128 128" class="group" set:html={item.svgPath} />
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-        ))}
+            ))}
             
         </div>
     </div>
 </section>
+<style>
+    .interpolate{
+        transition: height 0.5s;
+        interpolate-size: allow-keywords;
+    }
+</style>

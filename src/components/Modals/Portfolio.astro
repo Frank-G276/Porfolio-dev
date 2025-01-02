@@ -13,7 +13,7 @@ const name = "Portfolio";
 
 
 <!-- Extra Large Modal -->
-<div id={name} tabindex="-1" class="fixed hide-scrollbar top-0 m-auto  z-50 hidden max-w-[1150px] p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div id={name} tabindex="-1" class="fixed hide-scrollbar left-0 top-0 m-auto  z-50 hidden max-w-[1150px] p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
 <div class="relative w-full max-w-7xl max-h-full">
     <!-- Modal content -->
     <div class="relative ">
@@ -36,11 +36,11 @@ const name = "Portfolio";
         <!-- Modal body -->
         <div class="p-4 md:p-5 space-y-4">
            <article class="prose dark:prose-invert max-w-none mx-auto">
-                <div class="flex flex-row justify-evenly gap-4 items-center">
+                <div class="flex flex-row flex-wrap md:flex-nowrap justify-evenly gap-4 items-center">
                     <p class="justify-center max-w-[623px]">Este portfolio aprovecha las capacidades de Astro, un framework web moderno que se caracteriza por una experiencia de desarrollo eficiente y un rendimiento de producción superior. Se presentan a continuación los aspectos más relevantes de su implementación.</p>
                     <img src="Portfolio.webp" alt="Imagen del proyecto" class=" w-96 object-cover rounded-lg shadow-lg dark:shadow-white/10"/>
                 </div>
-                <div class="flex flex-row gap-4 items-center justify-evenly">
+                <div class="flex flex-row flex-wrap-reverse md:flex-nowrap gap-4 items-center justify-evenly">
                     <img src="Portfolio2.jpg" alt="Imagen del proyecto" class=" w-96 object-cover rounded-lg shadow-lg dark:shadow-white/10"/>
                     <p class="justify-center max-w-[623px]">La arquitectura de este proyecto ofrece gran mantenibilidad y escalabilidad a largo plazo. La organización modular de los componentes permite actualizar y ampliar el contenido de forma sencilla y eficiente. Esta independencia entre los componentes de como los proyectos y trabajos facilita el mantenimiento y la evolución del proyecto a lo largo del tiempo.</p>
                 </div>
