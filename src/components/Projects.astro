@@ -1,4 +1,5 @@
 ---
+import GestionClientes from "./Modals/Gestion_clientes.astro";
 import Portfolio from "./Modals/Portfolio.astro";
 
 
@@ -30,6 +31,15 @@ interface Project {
 }
 
 const projects = [
+    {
+        modal: GestionClientes,
+        title: 'Gestion de clientes',
+        description: 'Una aplicación web moderna y completa para la gestión de clientes y control de pagos, diseñada especialmente para pequeños negocios, freelancers y emprendedores que necesitan llevar un registro detallado de sus clientes y cobros.',
+        tags: ['React', 'TypeScript', 'Tailwind'],
+        demo: 'https://gestion-customers.netlify.app/',
+        source: 'https://github.com/Frank-G276/Gestion-de-Clientes',
+        image: 'Gestion/Gestion_Clientes.jpg',
+    },
    
     {
         modal: Portfolio,
@@ -38,8 +48,9 @@ const projects = [
         tags: ['Astro', 'TypeScript', 'Tailwind'],
         demo: 'https://frankdeveloper.netlify.app/',
         source: 'https://github.com/Frank-G276/Porfolio-dev',
-        image: 'Portfolio.webp',
+        image: 'Portfolio/Portfolio.webp',
     }
+    
   
 ]
 ---
