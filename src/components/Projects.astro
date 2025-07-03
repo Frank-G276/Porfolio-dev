@@ -2,7 +2,6 @@
 import GestionClientes from "./Modals/GestionClientes.astro";
 import Portfolio from "./Modals/Portfolio.astro";
 
-
 type TagStylesKeys = 'Angular' | 'TypeScript' | 'Spring' | 'SQL'| 'Astro' | 'TypeScript' | 'Tailwind' | 'CSS' | 'HTML' | 'JavaScript' | 'React' | 'Svelte' | 'Vue';
 
 const tagStyles: Record<TagStylesKeys, string> = {
@@ -33,7 +32,7 @@ interface Project {
 const projects = [
     {
         modal: GestionClientes,
-        title: 'Gestion de clientes',
+        title: 'Gestión de clientes',
         description: 'Una aplicación web moderna y completa para la gestión de clientes y control de pagos, diseñada especialmente para pequeños negocios, freelancers y emprendedores que necesitan llevar un registro detallado de sus clientes y cobros.',
         tags: ['React', 'TypeScript', 'Tailwind'],
         demo: 'https://gestion-customers.netlify.app/',
@@ -50,39 +49,45 @@ const projects = [
         source: 'https://github.com/Frank-G276/Porfolio-dev',
         image: 'Portfolio/Portfolio.webp',
     }
-    
-  
 ]
 ---
 
-<section id="projects" class=" min-w-screen pt-16 min-h-screen border-b border-zinc-300 dark:border-zinc-800">
+<section id="projects" class="min-w-screen pt-16 min-h-screen border-b border-zinc-300 dark:border-zinc-800">
     <div class="container mx-auto pt-3">
-        <div class="flex justify-center gap-2 mx-auto mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="my-auto" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.5L3.25 12l5.5 5.5m6.5-11l5.5 5.5l-5.5 5.5"/></svg>
+        <header class="flex justify-center gap-2 mx-auto mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="my-auto" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.5L3.25 12l5.5 5.5m6.5-11l5.5 5.5l-5.5 5.5"/>
+            </svg>
             <h2 class="text-4xl font-semibold my-auto">Proyectos</h2>
-        </div>
+        </header>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-                <div class="bg-white hover:bg-gray-50 border-gray-200 dark:bg-black/10 dark:hover:bg-gray-950 dark:border-gray-800 rounded-lg overflow-hidden
-                 shadow-sm dark:shadow-white/10 hover:shadow-lg dark:hover:shadow-white/10  transition-all group m-4"> 
-                    <img src={project.image} alt={project.title} class="w-full h-48 object-cover">
+                <article class="bg-white hover:bg-gray-50 border-gray-200 dark:bg-black/10 dark:hover:bg-gray-950 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm dark:shadow-white/10 hover:shadow-lg dark:hover:shadow-white/10 transition-all group m-4"> 
+                    <img 
+                        src={project.image} 
+                        alt={`Captura de pantalla del proyecto ${project.title} - Aplicación desarrollada con ${project.tags.join(', ')}`}
+                        class="w-full h-48 object-cover"
+                        width="400"
+                        height="192"
+                        loading="lazy"
+                    >
                     <div class="p-6 size-auto m-auto">
-                        <h3 class=" font-bold text-xl mb-2">{project.title}</h3>
+                        <h3 class="font-bold text-xl mb-2">{project.title}</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-                        <div class="flex gap-2 mb-4 flex-wrap">
+                        <div class="flex gap-2 mb-4 flex-wrap" role="list" aria-label="Tecnologías utilizadas">
                             {project.tags.map((tag) => ( 
-                                <span class={`px-3 py-1 rounded-full text-sm transition-all border ${tagStyles[tag as TagStylesKeys] || 'bg-gray-100'}`}>
-                                {tag}
+                                <span class={`px-3 py-1 rounded-full text-sm transition-all border ${tagStyles[tag as TagStylesKeys] || 'bg-gray-100'}`} role="listitem">
+                                    {tag}
                                 </span>
                             ))}
                         </div>
-                        <div class="flex flex-wrap gap-4 h-auto m-auto">
-                            <a href={project.demo} class="text-cyan-600 hover:underline hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300" target="_blank">Demo en Vivo</a>
-                            <a href={project.source} class="text-gray-600 hover:underline hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" target="_blank">Código Fuente</a>
+                        <nav class="flex flex-wrap gap-4 h-auto m-auto" aria-label="Enlaces del proyecto">
+                            <a href={project.demo} class="text-cyan-600 hover:underline hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300" target="_blank" rel="noopener noreferrer" aria-label={`Ver demo en vivo de ${project.title}`}>Demo en Vivo</a>
+                            <a href={project.source} class="text-gray-600 hover:underline hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer" aria-label={`Ver código fuente de ${project.title} en GitHub`}>Código Fuente</a>
                             <project.modal/>
-                        </div>
+                        </nav>
                     </div>
-                </div>
+                </article>
             ))}
         </div>
     </div>

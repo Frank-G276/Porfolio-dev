@@ -1,19 +1,110 @@
 ---
 import Header from "../components/Header.astro";
 import '@fontsource-variable/onest';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	url?: string;
+}
+
+const { 
+	title = "Frank Developer | Programador Web Full Stack | Angular, Spring Boot, Astro",
+	description = "Portafolio de Frank Guilombo, programador web Full Stack con más de 2 años de experiencia en Angular, Spring Boot, Astro y bases de datos SQL. Creando soluciones digitales innovadoras.",
+	image = "/Frank_Guilombo.jpg",
+	url = "https://frankdeveloper.netlify.app"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Frank Guilombo" />
+		<meta name="keywords" content="programador web, full stack developer, Angular, Spring Boot, Astro, desarrollo web, JavaScript, TypeScript, Java, SQL, portafolio desarrollador" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/devto-light.svg">
 		<link rel="icon" type="image/svg+xml" href="/devto-dark.svg" media="(prefers-color-scheme: dark)">
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, url)} />
+		<meta property="og:site_name" content="Frank Developer Portfolio" />
+		<meta property="og:locale" content="es_ES" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, url)} />
+		<meta property="twitter:creator" content="@frank_guilombo" />
+		
+		<!-- Additional SEO -->
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="color-scheme" content="light dark" />
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Frank Guilombo",
+			"alternateName": "Frank Developer",
+			"description": "Programador Web Full Stack especializado en Angular, Spring Boot y Astro",
+			"url": "https://frankdeveloper.netlify.app",
+			"image": "https://frankdeveloper.netlify.app/Frank_Guilombo.jpg",
+			"sameAs": [
+				"https://www.linkedin.com/in/frank-guilombo-028966205/",
+				"https://github.com/Frank-G276",
+				"https://www.facebook.com/frankdavid.guilombobonilla",
+				"https://www.instagram.com/frank_guilombo/"
+			],
+			"jobTitle": "Programador Web Full Stack",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Freelancer"
+			},
+			"knowsAbout": [
+				"Desarrollo Web",
+				"Angular",
+				"Spring Boot",
+				"Astro",
+				"JavaScript",
+				"TypeScript",
+				"Java",
+				"SQL",
+				"HTML",
+				"CSS",
+				"React"
+			],
+			"alumniOf": {
+				"@type": "EducationalOrganization",
+				"name": "Desarrollador Autodidacta"
+			}
+		}
+		</script>
+		
 		<meta name="generator" content={Astro.generator} />
-		<title>Frank Developer</title>
 	</head>
-	<body >
+	<body>
 		<div class="absolute top-0 z-[-2] h-screen w-screen bg-white 
 			bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
 		    dark:bg-neutral-950 dark:bg-gradiente-dark">
@@ -37,7 +128,6 @@ import '@fontsource-variable/onest';
 		height: 100%;
 		font-family: 'Onest Variable', sans-serif;
 		max-width: 100vw;
-		
 	}
 </style>
 <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>

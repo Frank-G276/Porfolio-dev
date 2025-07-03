@@ -2,30 +2,32 @@
 import Badge from "./Badge.astro";
 import SocialButtons from "./SocialButtons.astro";
 ---
-<section id="about" class=" w-full min-h-screen py-16 px-6 content-center border-b border-zinc-300 dark:border-zinc-800">
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-12  "  >
+<section id="about" class="w-full min-h-screen py-16 px-6 content-center border-b border-zinc-300 dark:border-zinc-800">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 basis-1/4">
-            <img src="Frank_Guilombo.jpg" alt="Profile" class="rounded-full w-64 h-64 object-cover mx-auto shadow-2xl shadow-white/10 ">
+            <img 
+                src="Frank_Guilombo.jpg" 
+                alt="Frank Guilombo - Programador Web Full Stack especializado en Angular, Spring Boot y Astro" 
+                class="rounded-full w-64 h-64 object-cover mx-auto shadow-2xl shadow-white/10"
+                width="256"
+                height="256"
+                loading="eager"
+            >
         </div>
         
         <div class="md:w-1/2 text-center md:text-left basis-3/4">
-            <h2 class="flex gap-4 text-4xl font-semibold mb-4 text-balance">
+            <h1 class="flex gap-4 text-4xl font-semibold mb-4 text-balance">
                 Programador Web <br>Full Stack 
                 <div class="flex w-fit h-fit mb-auto mt-auto"><Badge /></div>
-            </h2> 
+            </h1> 
             <p class="text-accent-foreground mb-6 text-pretty prose dark:prose-invert">
-                Apasionado por el mundo del desarrollo web, cuento con <span class="text-sky-400">más de 2 años</span> de experiencia creando soluciones digitales que impactan positivamente. Disfruto trabajando tanto en el <span class="text-yellow-400">front-end</span> como en el <span class="text-yellow-400">back-end</span>, utilizando tecnologías como <span class="text-pink-400">Angular</span>, <span class="text-pink-400">Astro</span>, <span class="text-pink-400">Spring Boot</span> y bases de datos <span class="text-pink-400">SQL</span>.<br/>
+                Apasionado por el mundo del <strong>desarrollo web</strong>, cuento con <span class="text-sky-400">más de 2 años</span> de experiencia creando soluciones digitales que impactan positivamente. Disfruto trabajando tanto en el <span class="text-yellow-400">front-end</span> como en el <span class="text-yellow-400">back-end</span>, utilizando tecnologías como <span class="text-pink-400">Angular</span>, <span class="text-pink-400">Astro</span>, <span class="text-pink-400">Spring Boot</span> y bases de datos <span class="text-pink-400">SQL</span>.<br/>
                 Me encanta mantenerme actualizado con las <span class="text-gray-400">últimas tendencias y herramientas</span>, buscando siempre la mejor manera de resolver los desafíos de cada proyecto.<br/>
                 Soy un firme creyente en el <span class="text-sky-400">trabajo en equipo</span> y la <span class="text-sky-400">comunicación efectiva</span> para lograr resultados excepcionales.
             </p>
             <div class="flex justify-center md:justify-start">
-
                 <SocialButtons/>
             </div>
-
-           
         </div>
     </div>
 </section>
-
-            

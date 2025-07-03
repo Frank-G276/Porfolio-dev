@@ -1,29 +1,30 @@
 ---
 import SocialButtons from "./SocialButtons.astro";
-
 ---
-<footer class="bg-white shadow dark:bg-zinc-900 ">
+<footer class="bg-white shadow dark:bg-zinc-900" role="contentinfo">
     <div class="w-full max-w-screen-xl mx-auto py-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between mx-4">
             <h1 class="text-2xl font-heading" translate="no">Frank Developer</h1>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#about" class="hover:underline me-4 md:me-6">Sobre mí</a>
-                </li>
-                <li>
-                    <a href="#works" class="hover:underline me-4 md:me-6">Trabajos</a>
-                </li>
-                <li>
-                    <a href="#projects" class="hover:underline me-4 md:me-6">Proyectos</a>
-                </li>
-                <li>
-                    <a href="#skills" class="hover:underline">Habilidades</a>
-                </li>
-            </ul>
+            <nav aria-label="Enlaces del pie de página">
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#about" class="hover:underline me-4 md:me-6">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#works" class="hover:underline me-4 md:me-6">Trabajos</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="hover:underline me-4 md:me-6">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="hover:underline">Habilidades</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="flex flex-col items-center justify-evenly text-center md:flex-row">
-            <span class="block text-sm text-gray-500  dark:text-gray-400">© 2024.
+            <span class="block text-sm text-gray-500 dark:text-gray-400">© 2024.
                 <span class="text-bold">Casi</span> todos los derechos reservados.</span>
             <div>
                 <SocialButtons />
@@ -31,5 +32,3 @@ import SocialButtons from "./SocialButtons.astro";
         </div>
     </div>
 </footer>
- 
-
