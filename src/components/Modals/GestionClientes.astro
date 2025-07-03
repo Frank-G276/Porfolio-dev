@@ -1,0 +1,66 @@
+---
+const name = "Gestion";
+
+---
+
+
+<button data-modal-target={name}
+ data-modal-toggle={name}
+ class="block w-full md:w-auto px-6 py-2.5 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20" 
+ type="button">
+    Más información
+</button>
+
+
+<!-- Extra Large Modal -->
+<div id={name} tabindex="-1" class="fixed hide-scrollbar left-0 top-0 m-auto  z-50 hidden max-w-[1150px] p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div class="relative w-full max-w-7xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative ">
+        <div class="absolute top-0 z-[-2] size-full bg-white 
+			bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
+		    dark:bg-neutral-950 dark:bg-gradiente-dark rounded-lg">
+		</div>
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-4xl font-bold text-gray-900 dark:text-white">
+                Gestión de clientes
+            </h3>
+            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide={name}>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5 space-y-4">
+           <article class="prose dark:prose-invert max-w-none mx-auto">
+                <div class="flex flex-row flex-wrap md:flex-nowrap justify-evenly gap-4 items-center">
+                    <p class="justify-center max-w-[623px]">Esta aplicación web es una solución moderna, práctica y eficiente para la gestión integral de clientes y el control de pagos, desarrollada con tecnologías actuales como React y Tailwind CSS, lo que garantiza un diseño responsivo, limpio y fácil de usar.
+
+                    Pensada especialmente para pequeños negocios, freelancers y emprendedores, permite registrar, consultar y actualizar información detallada de cada cliente, así como llevar un control organizado de sus pagos y deudas pendientes.
+
+                    Gracias a la integración del almacenamiento local mediante Local Storage, todos los datos se guardan de forma automática en el navegador del usuario, lo que facilita el acceso rápido y seguro a la información sin necesidad de configurar bases de datos externas o servidores.
+
+                    Esta herramienta está diseñada para ofrecer una experiencia intuitiva, permitiendo gestionar clientes y cobros desde cualquier dispositivo, optimizando así el tiempo y la productividad de quienes necesitan mantener sus finanzas bajo control.</p>
+                    <img src="Gestion/Gestion_Modal.jpg" alt="Imagen del proyecto" class=" w-96 object-cover rounded-lg shadow-lg dark:shadow-white/10"/>
+                </div>
+                
+                
+           </article>
+        </div>
+        
+    </div>
+</div>
+</div>
+<style>
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+        scrollbar-width: none;     /* Para Firefox */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;             /* Para Chrome, Safari y Opera */
+    }
+</style>
